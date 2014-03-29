@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-#import argparse
+from __future__ import print_function
+
 import random
 import string
 import sys
@@ -31,9 +32,9 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.2"
+VERSION = "1.3.3"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
-COPYRIGHT_MESSAGE = "copyright (c) 2013, Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
+COPYRIGHT_MESSAGE = "copyright (c) 2014, Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
 DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION + ", " + COPYRIGHT_MESSAGE
 
@@ -107,6 +108,7 @@ firstNameList = [
     "Brad",
     "Brag",
     "Brawl",
+    "Break",
     "Brick",
     "Brock",
     "Bruce",
@@ -119,6 +121,7 @@ firstNameList = [
     "Bud",
     "Buff",
     "Bug",
+    "Bulge",
     "Bulk",
     "Bull",
     "Burn",
@@ -145,14 +148,17 @@ firstNameList = [
     "Clayton",
     "Cliff",
     "Clint",
+    "Clutch",
     "Clyde",
     "Connor",
     "Count",
     "Crack",
     "Cram",
     "Crank",
+    "Crash",
     "Crud",
     "Crunch",
+    "Crutch",
     "Crush",
     "Dag",
     "Dash",
@@ -185,6 +191,8 @@ firstNameList = [
     "Flint",
     "Flip",
     "Flog",
+    "Force",
+    "Fork",
     "Frag",
     "Francis",
     "Frank",
@@ -203,6 +211,7 @@ firstNameList = [
     "Gouge",
     "Granite",
     "Gravel",
+    "Grease",
     "Greasy",
     "Griff",
     "Grim",
@@ -233,6 +242,7 @@ firstNameList = [
     "Herman",
     "Hog",
     "Holt",
+    "Horse",
     "Hound",
     "Howl",
     "Huge",
@@ -320,6 +330,7 @@ firstNameList = [
     "Phil",
     "Pierce",
     "Pitch",
+    "Plug",
     "Pound",
     "Pug",
     "Punch",
@@ -422,12 +433,14 @@ firstNameList = [
     "Thaddeus",
     "Thick",
     "Thor",
+    "Throb",
     "Thud",
     "Thug",
     "Thump",
     "Tiberius",
     "Tim",
     "Tom",
+    "Tony",
     "Tor",
     "Torch",
     "Torgo",
@@ -473,6 +486,7 @@ lastNameOneList = [
     [ "Anvil",        2,      noun      ],
     [ "Ape",          1,      animal    ],
     [ "Assault",      2,      verb      ],
+    [ "Attack",       2,      verb      ],
     [ "Awful",        2,      adjective ],
     [ "Ax",           1,      noun      ],
     [ "Back",         1,      bodyPart  ],
@@ -574,7 +588,7 @@ lastNameOneList = [
     [ "Flog",         1,      verb      ],
     [ "Foot",         1,      bodyPart  ],
     [ "Frag",         1,      verb      ],
-    [ "Franken",      2,      adjective ],        # we don't want it to work like the other modifiers
+    [ "Franken",      2,      adjective ],   # we don't want it to work like the other modifiers
     [ "Fury",         2,      noun      ],
     [ "Gator",        2,      animal    ],
     [ "Giant",        2,      adjective ],
@@ -606,6 +620,7 @@ lastNameOneList = [
     [ "Heel",         1,      bodyPart  ],
     [ "Hinder",       2,      bodyPart  ],
     [ "Hog",          1,      animal    ],
+    [ "Horse",        1,      animal    ],
     [ "Hound",        1,      animal    ],
     [ "Huge",         1,      adjective ],
     [ "Hulk",         1,      noun      ],
@@ -622,6 +637,7 @@ lastNameOneList = [
     [ "Jet",          1,      noun      ],
     [ "Jump",         1,      verb      ],
     [ "Kick",         1,      verb      ],
+    [ "Kicking",      1,      adjective ],
     [ "Kill",         1,      verb      ],
     [ "Knee",         1,      bodyPart  ],
     [ "Knuckle",      2,      bodyPart  ],
@@ -646,6 +662,7 @@ lastNameOneList = [
     [ "Meaty",        2,      adjective ],
     [ "Metal",        2,      noun      ],
     [ "Mighty",       2,      adjective ],
+    [ "Monkey",       2,      animal    ],
     [ "Monster",      2,      animal    ],
     [ "Moose",        1,      animal    ],
     [ "Mountain",     2,      noun      ],
@@ -666,11 +683,13 @@ lastNameOneList = [
     [ "Pile",         2,      noun      ],
     [ "Pistol",       2,      noun      ],
     [ "Plank",        1,      noun      ],
+    [ "Plug",         1,      nounVerb  ],
     [ "Pork",         1,      meat      ],
     [ "Pound",        1,      verb      ],
     [ "Power",        2,      noun      ],
     [ "Pummel",       2,      verb      ],
     [ "Punch",        1,      nounVerb  ],
+    [ "Punching",     1,      adjective ],
     [ "Punk",         1,      noun      ],
     [ "Punt",         1,      verb      ],
     [ "Quarrel",      2,      verb      ],
@@ -804,6 +823,7 @@ lastNameTwoList = [
     [ "anvil",        2,      noun      ],
     [ "ape",          1,      animal    ],
     [ "assault",      2,      verb      ],
+    [ "attack",       2,      noun      ],
     [ "axe",          1,      noun      ],
     [ "back",         1,      bodyPart  ],
     [ "bacon",        2,      meat      ],
@@ -919,6 +939,7 @@ lastNameTwoList = [
     [ "flank",        1,      noun      ],
     [ "flog",         1,      verb      ],
     [ "foot",         1,      bodyPart  ],
+    [ "force",        1,      nounVerb  ],
     [ "fracture",     2,      nounVerb  ],
     [ "frag",         1,      verb      ],
     [ "fragger",      2,      noun      ],
@@ -955,6 +976,7 @@ lastNameTwoList = [
     [ "hinder",       2,      bodyPart  ],
     [ "hog",          1,      animal    ],
     [ "hound",        1,      animal    ],
+    [ "horse",        1,      animal    ],
     [ "huge",         1,      adjective ],
     [ "hulk",         1,      noun      ],
     [ "hunk",         1,      noun      ],
@@ -1435,6 +1457,8 @@ def buildName( ):
 #//**********************************************************************
 
 def main( ):
+    import argparse
+
     parser = argparse.ArgumentParser( prog=PROGRAM_NAME, description=DESCRIPTION )
 
     parser.add_argument( '-n', '--count', type=int, action='store', default=1 )
@@ -1452,16 +1476,6 @@ def main( ):
         print( "first names:    " + format( firstNameListSize ) )
         print( "last names one: " + format( lastNameOneListSize ) )
         print( "last names two: " + format( lastNameTwoListSize ) )
-
-
-#//**********************************************************************
-#//
-#//  __main__
-#//
-#//**********************************************************************
-
-#if __name__ == '__main__':
-#    main( )
 
 
 #//**********************************************************************
@@ -1537,7 +1551,17 @@ def buildWebPage( ):
     return webPage
 
 
-print buildWebPage( )
+#//**********************************************************************
+#//
+#//  __main__
+#//
+#//**********************************************************************
+
+if __name__ == '__main__':
+    main( )
+else:
+    print( buildWebPage( ) )
+
 
 
 
