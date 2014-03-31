@@ -41,6 +41,9 @@ So, there really isn't a point to this.
 	represents a simple exercise in string manipulation and data structures in
 	Python for me from back in the fall of 2012.
 
+	BigMcLargeHuge runs on Python 2 and Python 3 and can be used from the
+	command-line, or as a web page (http://zycha.com/BigMcLargeHuge.py).
+
 	Rick Gutleber
 	rickg@his.com
 	2014-03-31
