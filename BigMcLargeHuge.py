@@ -32,7 +32,7 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.4"
+VERSION = "1.3.5"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
 COPYRIGHT_MESSAGE = "copyright (c) 2014, Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
@@ -88,6 +88,7 @@ firstNameList = [
     "Bert",
     "Biff",
     "Big",
+    "Bilge",
     "Bill",
     "Billy",
     "Bjorn",
@@ -136,6 +137,7 @@ firstNameList = [
     "Chap",
     "Char",
     "Charles",
+    "Charleton",
     "Chaz",
     "Chester",
     "Chip",
@@ -159,8 +161,8 @@ firstNameList = [
     "Crash",
     "Crud",
     "Crunch",
-    "Crutch",
     "Crush",
+    "Crutch",
     "Dag",
     "Danger",
     "Dash",
@@ -231,6 +233,7 @@ firstNameList = [
     "Gun",
     "Gunner",
     "Gunther",
+    "Gus",
     "Gut",
     "Guy",
     "Hack",
@@ -421,6 +424,7 @@ firstNameList = [
     "Stag",
     "Stan",
     "Stanley",
+    "Steel",
     "Steve",
     "Stick",
     "Stomp",
@@ -444,6 +448,7 @@ firstNameList = [
     "Thud",
     "Thug",
     "Thump",
+    "Thunder",
     "Tiberius",
     "Tim",
     "Tom",
@@ -463,6 +468,7 @@ firstNameList = [
     "Tyson",
     "Vic",
     "Victor",
+    "Volt",
     "Wallop",
     "Wally",
     "Walt",
@@ -474,6 +480,7 @@ firstNameList = [
     "Wreck",
     "Wrench",
     "Yak",
+    "Yancy",
     "Yank",
     "Zack",
     "Zane",
@@ -508,13 +515,14 @@ lastNameOneList = [
     [ "Batter",       2,      verb      ],
     [ "Battle",       2,      nounVerb  ],
     [ "Bear",         1,      animal    ],
-    [ "Beat",         1,      verb      ],
     [ "Beast",        1,      noun      ],
+    [ "Beat",         1,      verb      ],
     [ "Beef",         1,      meat      ],
     [ "Bend",         1,      verb      ],
     [ "Bent",         1,      adjective ],
     [ "Berserk",      2,      adjective ],
     [ "Big",          1,      adjective ],
+    [ "Bigger",       1,      adjective ],
     [ "Bison",        2,      animal    ],
     [ "Bite",         1,      verb      ],
     [ "Black",        1,      adjective ],
@@ -603,6 +611,7 @@ lastNameOneList = [
     [ "Fury",         2,      noun      ],
     [ "Gator",        2,      animal    ],
     [ "Giant",        2,      adjective ],
+    [ "Goat",         1,      animal    ],
     [ "Gorilla",      3,      animal    ],
     [ "Gouge",        1,      nounVerb  ],
     [ "Grab",         1,      verb      ],
@@ -626,6 +635,7 @@ lastNameOneList = [
     [ "Hatchet",      2,      noun      ],
     [ "Hawk",         1,      animal    ],
     [ "Head",         1,      bodyPart  ],
+    [ "Heart",        1,      bodyPart  ],
     [ "Heave",        1,      verb      ],
     [ "Heavy",        2,      adjective ],
     [ "Heel",         1,      bodyPart  ],
@@ -654,6 +664,7 @@ lastNameOneList = [
     [ "Knuckle",      2,      bodyPart  ],
     [ "Large",        1,      adjective ],
     [ "Lava",         2,      noun      ],
+    [ "Leather",      2,      noun      ],
     [ "Leopard",      2,      animal    ],
     [ "Lion",         2,      animal    ],
     [ "Log",          1,      noun      ],
@@ -668,9 +679,9 @@ lastNameOneList = [
     [ "Master",       1,      noun      ],
     [ "Maul",         1,      verb      ],
     [ "Mean",         1,      adjective ],
-    [ "Mega",         2,      modifier  ],
     [ "Meat",         1,      meat      ],
     [ "Meaty",        2,      adjective ],
+    [ "Mega",         2,      modifier  ],
     [ "Metal",        2,      noun      ],
     [ "Mighty",       2,      adjective ],
     [ "Monkey",       2,      animal    ],
@@ -709,7 +720,9 @@ lastNameOneList = [
     [ "Ready",        2,      adjective ],
     [ "Red",          1,      adjective ],
     [ "Rib",          1,      bodyPart  ],
+    [ "Rigid",        2,      adjective ],
     [ "Rip",          1,      verb      ],
+    [ "Rivet",        2,      nounVerb  ],
     [ "Roar",         1,      verb      ],
     [ "Rock",         1,      noun      ],
     [ "Rocket",       2,      noun      ],
@@ -761,8 +774,8 @@ lastNameOneList = [
     [ "Split",        1,      verb      ],
     [ "Sprain",       1,      nounVerb  ],
     [ "Spud",         1,      noun      ],
-    [ "Squash",       1,      verb      ],
     [ "Square",       1,      adjective ],
+    [ "Squash",       1,      verb      ],
     [ "Squat",        1,      verb      ],
     [ "Stag",         1,      animal    ],
     [ "Stamp",        1,      verb      ],
@@ -806,6 +819,7 @@ lastNameOneList = [
     [ "Ugly",         2,      adjective ],
     [ "van der ",     2,      modifier  ],
     [ "Viper",        2,      animal    ],
+    [ "Volt",         1,      noun      ],
     [ "von ",         1,      modifier  ],
     [ "Vulture",      2,      animal    ],
     [ "Wall",         1,      noun      ],
@@ -827,14 +841,14 @@ lastNameOneList = [
 
 lastNameTwoList = [
     [ "able",         2,      modifier  ],
-    [ "angry",        2,      adjective ],
     [ "alo",          2,      modifier  ],
     [ "alot",         2,      modifier  ],
     [ "amundo",       3,      modifier  ],
-    [ "arillo",       3,      modifier  ],
+    [ "angry",        2,      adjective ],
     [ "ankle",        2,      bodyPart  ],
     [ "anvil",        2,      noun      ],
     [ "ape",          1,      animal    ],
+    [ "arillo",       3,      modifier  ],
     [ "assault",      2,      verb      ],
     [ "attack",       2,      noun      ],
     [ "axe",          1,      noun      ],
@@ -910,8 +924,8 @@ lastNameTwoList = [
     [ "chump",        1,      noun      ],
     [ "chunk",        1,      noun      ],
     [ "churn",        1,      verb      ],
-    [ "clobber",      2,      verb      ],
     [ "clamp",        1,      noun      ],
+    [ "clobber",      2,      verb      ],
     [ "clump",        1,      noun      ],
     [ "cougar",       2,      animal    ],
     [ "crack",        1,      verb      ],
@@ -965,6 +979,7 @@ lastNameTwoList = [
     [ "fragger",      2,      noun      ],
     [ "fury",         2,      noun      ],
     [ "gator",        2,      animal    ],
+    [ "goat",         1,      animal    ],
     [ "gouge",        1,      verb      ],
     [ "gouger",       2,      noun      ],
     [ "grab",         1,      verb      ],
@@ -990,13 +1005,14 @@ lastNameTwoList = [
     [ "hawk",         1,      animal    ],
     [ "head",         1,      bodyPart  ],
     [ "heap",         1,      noun      ],
+    [ "heart",        1,      bodyPart  ],
     [ "heave",        1,      verb      ],
     [ "heavy",        1,      adjective ],
     [ "heel",         1,      bodyPart  ],
     [ "hinder",       2,      bodyPart  ],
     [ "hog",          1,      animal    ],
-    [ "hound",        1,      animal    ],
     [ "horse",        1,      animal    ],
+    [ "hound",        1,      animal    ],
     [ "huge",         1,      adjective ],
     [ "hulk",         1,      noun      ],
     [ "hunk",         1,      noun      ],
@@ -1021,6 +1037,7 @@ lastNameTwoList = [
     [ "kill",         1,      verb      ],
     [ "knuckles",     2,      bodyPart  ],
     [ "large",        1,      adjective ],
+    [ "leather",      2,      noun      ],
     [ "legs",         1,      bodyPart  ],
     [ "leopard",      2,      animal    ],
     [ "ley",          1,      modifier  ],
@@ -1089,6 +1106,7 @@ lastNameTwoList = [
     [ "ribs",         1,      bodyPart  ],
     [ "riot",         2,      noun      ],
     [ "rip",          1,      verb      ],
+    [ "rivet",        2,      nounVerb  ],
     [ "roar",         1,      verb      ],
     [ "roast",        1,      nounVerb  ],
     [ "rock",         1,      noun      ],
@@ -1136,8 +1154,8 @@ lastNameTwoList = [
     [ "stack",        1,      noun      ],
     [ "stag",         1,      animal    ],
     [ "steak",        1,      meat      ],
-    [ "stein",        1,      modifier  ],
     [ "steel",        1,      adjective ],
+    [ "stein",        1,      modifier  ],
     [ "stick",        1,      noun      ],
     [ "stomp",        1,      verb      ],
     [ "stone",        1,      adjective ],
@@ -1153,8 +1171,8 @@ lastNameTwoList = [
     [ "sword",        1,      noun      ],
     [ "tackle",       2,      verb      ],
     [ "tacular",      3,      modifier  ],
-    [ "tastic",       2,      modifier  ],
     [ "tank",         1,      noun      ],
+    [ "tastic",       2,      modifier  ],
     [ "tastic",       2,      modifier  ],
     [ "teeth",        1,      bodyPart  ],
     [ "thick",        1,      adjective ],
@@ -1176,6 +1194,7 @@ lastNameTwoList = [
     [ "truck",        1,      noun      ],
     [ "twister",      2,      noun      ],
     [ "viper",        2,      animal    ],
+    [ "volt",         1,      noun      ],
     [ "vulture",      2,      animal    ],
     [ "wall",         1,      noun      ],
     [ "wallop",       2,      verb      ],
@@ -1370,25 +1389,25 @@ def buildName( ):
           ( ( lastNameOne[ 0 ][ -1 ] == "a" ) and ( lastNameTwo[ 0 ][ 0 ] == "a" ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] == "a" ) and ( lastNameTwo[ 0 ][ 0 ] == "o" ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] == "e" ) and ( lastNameTwo[ 0 ] in [ "eater", "splode" ] ) ) or \
+          ( ( lastNameOne[ 0 ][ -1 ] == "l" ) and ( lastNameTwo[ 0 ] in ( "alo" ) ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] == "y" ) and ( lastNameTwo[ 0 ] == "ley" ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] == "y" ) and ( lastNameTwo[ 0 ] == "ly" ) ) or \
-          ( ( lastNameOne[ 0 ][ -1 ] not in vowels ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "an", "en", "in", "on", "un" ] ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "ar", "er", "ir", "or", "ur" ] ) and ( lastNameTwo[ 0 ] == "cuda" ) ) or \
-          ( ( lastNameOne[ 0 ][ -1 ] == "l" ) and ( lastNameTwo[ 0 ] in ( "alo" ) ) ) or \
-          ( ( lastNameOne[ 0 ][ -2 : ] == "er" ) and ( lastNameTwo[ 0 ] in ( "alo" ) ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] in "aeiouy" ) and ( lastNameTwo[ 0 ] in ( "alo", "ington" ) ) ) or \
           ( ( lastNameOne[ 0 ][ -1 ] in "aiouy" ) and ( lastNameTwo[ 0 ] in [ "alot", "amundo", "inator", "omatic", "orama" ] ) ) or \
+          ( ( lastNameOne[ 0 ][ -1 ] not in "aeiouy" ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "ar", "er", "ir", "or", "ur" ] ) and ( lastNameTwo[ 0 ] in [ "naut" ] ) ) or \
+          ( ( lastNameOne[ 0 ][ -1 ] not in vowels ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "an", "en", "in", "on", "un" ] ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "ar", "er", "ir", "or", "ur" ] ) and ( lastNameTwo[ 0 ] == "cuda" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ch" ) and ( lastNameTwo[ 0 ][ 0 : 2 ] == "ch" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ee" ) and ( lastNameTwo[ 0 ] in [ "alot", "enstein", "enheimer", "erella", "erino", "inator", "omatic", "orama" ] ) ) or \
-          ( ( lastNameOne[ 0 ][ -2 : ] == "th" ) and ( lastNameTwo[ 0 ][ : 2 ] == "th" ) ) or \
+          ( ( lastNameOne[ 0 ][ -2 : ] == "er" ) and ( lastNameTwo[ 0 ] in ( "alo" ) ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ff" ) and ( lastNameTwo[ 0 ][ 0 ] == "f" ) ) or \
-          ( ( lastNameOne[ 0 ][ -2 : ] == "ll" ) and ( lastNameTwo[ 0 ][ 0 ] == "l" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ll" ) and ( lastNameTwo[ 0 ] == "ley" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ll" ) and ( lastNameTwo[ 0 ] == "ly" ) ) or \
+          ( ( lastNameOne[ 0 ][ -2 : ] == "ll" ) and ( lastNameTwo[ 0 ][ 0 ] == "l" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "sh" ) and ( lastNameTwo[ 0 ][ : 2 ] == "sl" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "ss" ) and ( lastNameTwo[ 0 ][ 0 ] == "s" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "st" ) and ( lastNameTwo[ 0 ][ 0 ] == "s" ) ) or \
           ( ( lastNameOne[ 0 ][ -2 : ] == "st" ) and ( lastNameTwo[ 0 ][ 0 ] == "s" ) ) or \
-          ( ( lastNameOne[ 0 ][ -1 ] not in "aeiouy" ) and ( lastNameOne[ 0 ][ -2 : ] not in [ "ar", "er", "ir", "or", "ur" ] ) and ( lastNameTwo[ 0 ] in [ "naut" ] ) ) or \
+          ( ( lastNameOne[ 0 ][ -2 : ] == "th" ) and ( lastNameTwo[ 0 ][ : 2 ] == "th" ) ) or \
           ( ( lastNameOne[ 0 ][ -3 : ] == "ash" ) and ( lastNameTwo[ 0 ][ -3 : ] == "ash" ) ) or \
           ( ( lastNameOne[ 0 ][ -3 : ] == "ple" ) and ( lastNameTwo[ 0 ][ -3 : ] == "ple" ) ) or \
           ( ( lastNameOne[ 0 ][ -3 : ] == "ump" ) and ( lastNameTwo[ 0 ][ -3 : ] == "ump" ) ) or \
@@ -1398,7 +1417,7 @@ def buildName( ):
           ( ( lastNameOne[ 1 ] > 1 ) and ( lastNameTwo[ 0 ] in [ "alo", "alot", "arillo", "enstein", "enheimer", "ilicious", "inator", "ington", "tacular", "tastic" ] ) ) or \
           ( ( lastNameOne[ 1 ] < 2 ) and ( lastNameTwo[ 0 ] in [ "licious", "naut" ] ) ) or \
           ( ( lastNameOne[ 2 ] in [ bodyPart ]  ) and ( lastNameTwo[ 0 ] in [ "feast" ] ) ) or \
-          ( ( lastNameOne[ 2 ] in [ adjective ] ) and ( lastNameTwo[ 0 ] in [ "normous" ] ) ) or \
+          ( ( lastNameOne[ 2 ] in [ adjective ] ) and ( lastNameOne[ 1 ] > 1 ) and ( lastNameTwo[ 0 ] in [ "normous" ] ) ) or \
           ( ( lastNameOne[ 2 ] in [ verb, adjective ] ) and ( lastNameTwo[ 0 ] in [ "heave", "torn" ] ) ) or \
           ( ( lastNameOne[ 2 ] not in [ bodyPart  ]  ) and ( lastNameTwo[ 0 ] in [ "damage" ] ) ) or \
           ( firstName.lower( ) == lastNameTwo[ 0 ] ) or \
@@ -1532,14 +1551,14 @@ def siteBody( title ):
 Thanks for many additional suggestions from Ian, Francine and Jeremy.<br>
 Now with over <i>one hundred million</i> possible combinations and support for semantic rules so there are fewer lame names!<br><br>
 Coming soon to a theater near you: <a href="http://zycha.com/BMovie.py">B-Movies</a>!<br>
-<a href="https://github.com/ConceptJunkie/BigMcLargeHuge">Source Code</a><br>
-Send suggestions, complaints or meandering stories about your goiter to <a href="mailto:rickg@his.com?subject=BigMcLargeHuge">rickg@his.com</a><br><br><br>
+Send suggestions, complaints or meandering stories about your goiter to <a href="mailto:rickg@his.com?subject=BigMcLargeHuge">rickg@his.com</a><br>
+<a href="https://github.com/ConceptJunkie/BigMcLargeHuge">Source Code</a><br><br><br>
 """ + '\n'
     string += "Stats:<ul>" + '\n'
     string += "<li>First Names: " + str( firstNameListSize ) + "</li>" + '\n'
     string += "<li>Last Names (first half): " + str( lastNameOneListSize ) + "</li>" + '\n'
     string += "<li>Last Names (second half): " + str( lastNameTwoListSize ) + "</li>" + '\n'
-    string += "<li>plus name modifiers and other secret sauce</li></ul>" + '\n'
+    string += "<li>plus name modifiers and other <a href=\"https://github.com/ConceptJunkie/BigMcLargeHuge\">secret sauce</a></li></ul>" + '\n'
 
     return string
 
