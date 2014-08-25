@@ -32,7 +32,7 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.5"
+VERSION = "1.3.6"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
 COPYRIGHT_MESSAGE = "copyright (c) 2014, Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
@@ -416,6 +416,7 @@ firstNameList = [
     "Splint",
     "Split",
     "Splot",
+    "Spode",
     "Spork",
     "Sport",
     "Spud",
@@ -624,6 +625,7 @@ lastNameOneList = [
     [ "Gristle",      2,      noun      ],
     [ "Grit",         1,      noun      ],
     [ "Grizzly",      2,      animal    ],
+    [ "Ground",       1,      verb      ],
     [ "Growl",        1,      verb      ],
     [ "Grunt",        1,      nounVerb  ],
     [ "Gut",          1,      bodyPart  ],
@@ -1422,7 +1424,7 @@ def buildName( ):
           ( ( lastNameOne[ 2 ] not in [ bodyPart  ]  ) and ( lastNameTwo[ 0 ] in [ "damage" ] ) ) or \
           ( firstName.lower( ) == lastNameTwo[ 0 ] ) or \
           ( lastNameOne[ 0 ].lower( ) == lastNameTwo[ 0 ] ) or \
-          ( lastNameOne[ 0 ][ -4 : ] == lastNameTwo[ 0 ][ -4 : ] ) or \
+          ( lastNameOne[ 0 ][ -3 : ] == lastNameTwo[ 0 ][ -3 : ] ) or \
           ( lastNameOne[ 0 ][ : 4 ].lower( ) == lastNameTwo[ 0 ][ : 4 ] ) or \
           ( ( lastNameOne[ 2 ] not in [ verb, nounVerb  ] ) and  ( lastNameTwo[ 0 ] == "lots" ) ):
         # print( firstName + " " + lastNameOne[ 0 ] + " " + lastNameTwo[ 0 ] )
