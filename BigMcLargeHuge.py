@@ -32,9 +32,9 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.6"
+VERSION = "1.3.7"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
-COPYRIGHT_MESSAGE = "copyright (c) 2014, Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
+COPYRIGHT_MESSAGE = "copyright (c) 2014,2018 Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
 DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION + ", " + COPYRIGHT_MESSAGE
 
@@ -374,6 +374,7 @@ firstNameList = [
     "Sam",
     "Samson",
     "Sarge",
+    "Saw",
     "Scorch",
     "Shaft",
     "Shane",
@@ -555,6 +556,7 @@ lastNameOneList = [
     [ "Burn",         1,      verb      ],
     [ "Burnt",        1,      adjective ],
     [ "Burst",        1,      verb      ],
+    [ "Bust",         1,      verb      ],
     [ "Buster",       2,      noun      ],
     [ "Butt",         1,      bodyPart  ],
     [ "Cannon",       2,      noun      ],
@@ -642,6 +644,7 @@ lastNameOneList = [
     [ "Heavy",        2,      adjective ],
     [ "Heel",         1,      bodyPart  ],
     [ "Hinder",       2,      bodyPart  ],
+    [ "Hit",          1,      verb      ],
     [ "Hog",          1,      animal    ],
     [ "Horse",        1,      animal    ],
     [ "Hound",        1,      animal    ],
@@ -738,6 +741,7 @@ lastNameOneList = [
     [ "Scar",         1,      noun      ],
     [ "Scare",        1,      verb      ],
     [ "Scary",        2,      adjective ],
+    [ "Scissor",      1,      verb      ],
     [ "Scorch",       1,      verb      ],
     [ "Scrape",       1,      verb      ],
     [ "Scream",       1,      nounVerb  ],
@@ -779,6 +783,7 @@ lastNameOneList = [
     [ "Square",       1,      adjective ],
     [ "Squash",       1,      verb      ],
     [ "Squat",        1,      verb      ],
+    [ "Squeeze",      1,      verb      ],
     [ "Stag",         1,      animal    ],
     [ "Stamp",        1,      verb      ],
     [ "Steak",        1,      meat      ],
@@ -916,6 +921,7 @@ lastNameTwoList = [
     [ "cannon",       2,      noun      ],
     [ "castle",       2,      noun      ],
     [ "charger",      2,      noun      ],
+    [ "cheese",       1,      noun      ],
     [ "chest",        1,      bodyPart  ],
     [ "chewer",       2,      noun      ],
     [ "chin",         1,      bodyPart  ],
@@ -963,6 +969,7 @@ lastNameTwoList = [
     [ "erella",       3,      modifier  ],
     [ "erino",        3,      modifier  ],
     [ "face",         1,      bodyPart  ],
+    [ "fall",         1,      verb      ],
     [ "fast",         1,      adjective ],
     [ "faster",       2,      adjective ],
     [ "feast",        1,      noun      ],
@@ -1012,6 +1019,7 @@ lastNameTwoList = [
     [ "heavy",        1,      adjective ],
     [ "heel",         1,      bodyPart  ],
     [ "hinder",       2,      bodyPart  ],
+    [ "hit",          1,      verb      ],
     [ "hog",          1,      animal    ],
     [ "horse",        1,      animal    ],
     [ "hound",        1,      animal    ],
@@ -1037,6 +1045,7 @@ lastNameTwoList = [
     [ "kick",         1,      verb      ],
     [ "kicker",       2,      noun      ],
     [ "kill",         1,      verb      ],
+    [ "knuckle",      2,      bodyPart  ],
     [ "knuckles",     2,      bodyPart  ],
     [ "large",        1,      adjective ],
     [ "leather",      2,      noun      ],
@@ -1106,6 +1115,7 @@ lastNameTwoList = [
     [ "rage",         1,      noun      ],
     [ "ram",          1,      verb      ],
     [ "ribs",         1,      bodyPart  ],
+    [ "rilla",        1,      animal    ],
     [ "riot",         2,      noun      ],
     [ "rip",          1,      verb      ],
     [ "rivet",        2,      nounVerb  ],
@@ -1125,7 +1135,6 @@ lastNameTwoList = [
     [ "shrapnel",     2,      noun      ],
     [ "shredder",     2,      noun      ],
     [ "skull",        1,      bodyPart  ],
-    [ "skunk",        1,      animal    ],
     [ "slab",         1,      verb      ],
     [ "slag",         1,      verb      ],
     [ "slam",         1,      verb      ],
