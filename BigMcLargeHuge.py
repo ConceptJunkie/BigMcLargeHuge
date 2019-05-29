@@ -34,7 +34,7 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.8"
+VERSION = "1.3.9"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
 COPYRIGHT_MESSAGE = "copyright (c) 2019 (2014), Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
@@ -1199,6 +1199,7 @@ lastNameTwoList = [
     [ "slugger",      2,      WordType.noun      ],
     [ "smash",        1,      WordType.verb      ],
     [ "smasher",      2,      WordType.noun      ],
+    [ "smith",        2,      WordType.noun      ],
     [ "snag",         1,      WordType.verb      ],
     [ "snake",        1,      WordType.animal    ],
     [ "snap",         1,      WordType.verb      ],
@@ -1431,16 +1432,7 @@ def buildName( ):
     firstName = getFirstName( )
 
     lastNameOne = getLastNameOne( )
-
-    # while firstName == lastNameOne[ 0 ]:
-    #     lastNameOne = getLastNameOne( )
-
-        # if firstName == lastNameOne[ 0 ]:
-        #     print( "-->  " + firstName + " " + lastNameOne[ 0 ] )
-
     lastNameTwo = getLastNameTwo( )
-
-    # lastNameTwo = [ "enheimer", 2, modifier ]
 
     # lastNameOne[ 0 ] in [ "Back", "Side" ] ) and ( lastNameTwo[ 2 ] in [ noun, bodyPart, animal, adjective, modifier ] ) ) or \
 
@@ -1485,6 +1477,7 @@ def buildName( ):
           ( ( lastNameOne[ 2 ] in [ WordType.adjective ] ) and ( lastNameOne[ 1 ] > 1 ) and ( lastNameTwo[ 0 ] in [ "normous" ] ) ) or \
           ( ( lastNameOne[ 2 ] in [ WordType.verb, WordType.adjective ] ) and ( lastNameTwo[ 0 ] in [ "heave", "torn" ] ) ) or \
           ( ( lastNameOne[ 2 ] not in [ WordType.bodyPart ]  ) and ( lastNameTwo[ 0 ] in [ "damage" ] ) ) or \
+          ( firstName.lower( ) == lastNameOne[ 0 ] ) or \
           ( firstName.lower( ) == lastNameTwo[ 0 ] ) or \
           ( lastNameOne[ 0 ].lower( ) == lastNameTwo[ 0 ] ) or \
           ( lastNameOne[ 0 ][ -3 : ] == lastNameTwo[ 0 ][ -3 : ] ) or \
