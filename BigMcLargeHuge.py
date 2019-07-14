@@ -9,8 +9,8 @@ import sys
 from enum import Enum
 
 # enable debugging
-import cgitb
-cgitb.enable( )
+#import cgitb
+#cgitb.enable( )
 
 
 #//**********************************************************************
@@ -34,11 +34,11 @@ cgitb.enable( )
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.9"
+VERSION = "1.3.10"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
 COPYRIGHT_MESSAGE = "copyright (c) 2019 (2014), Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
-DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION + ", " + COPYRIGHT_MESSAGE
+DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION 
 
 consonants = "bcdfghjklmnpqrstvwxz"
 vowels = "aeoiuy"
@@ -1597,6 +1597,7 @@ def siteHeader( title ):
 
 def siteBody( title ):
     string = "<h2>" + title + "</h2>" + '\n'
+    string += COPYRIGHT_MESSAGE + '<br><br>\n'
     string += "Inspired by Mystery Science Theater 3000, episode #820, 'Space Mutiny'<br>" + '\n'
     string += "<h2>" + buildName( ) + "</h2>" + '\n'
     string += "<h2>" + buildName( ) + "</h2>" + '\n'
@@ -1611,7 +1612,6 @@ def siteBody( title ):
     string += """Hit 'Refresh' for more names.  Props to Reb Brown!<br>
 Thanks for many additional suggestions from Ian, Francine and Jeremy.<br>
 Now with over <i>one hundred million</i> possible combinations and support for semantic rules so there are fewer lame names!<br><br>
-Coming soon to a theater near you: <a href="http://zycha.com/BMovie.py">B-Movies</a>!<br>
 Send suggestions, complaints or meandering stories about your goiter to <a href="mailto:rickg@his.com?subject=BigMcLargeHuge">rickg@his.com</a><br>
 <a href="https://github.com/ConceptJunkie/BigMcLargeHuge">Source Code</a><br><br><br>
 """ + '\n'
@@ -1643,8 +1643,7 @@ def siteFooter( ):
 def buildWebPage( ):
     pageTitle = DESCRIPTION
 
-    webPage = "Content-Type: text/html\r\n\r\n"
-    webPage += siteHeader( pageTitle )
+    webPage = siteHeader( pageTitle )
     webPage += siteBody( pageTitle )
     webPage += siteFooter( )
     return webPage
