@@ -34,11 +34,11 @@ from enum import Enum
 #//**********************************************************************
 
 PROGRAM_NAME = "BigMcLargeHuge"
-VERSION = "1.3.10"
+VERSION = "1.3.11"
 PROGRAM_DESCRIPTION = "an action movie hero name generator"
-COPYRIGHT_MESSAGE = "copyright (c) 2019 (2014), Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
+COPYRIGHT_MESSAGE = "copyright (c) 2022 (2014), Rick and Simon Gutleber (rickg@his.com, simon@zycha.com)"
 
-DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION 
+DESCRIPTION = PROGRAM_NAME + " " + VERSION + ", " + PROGRAM_DESCRIPTION
 
 consonants = "bcdfghjklmnpqrstvwxz"
 vowels = "aeoiuy"
@@ -519,6 +519,7 @@ firstNameList = [
     "Yak",
     "Yancy",
     "Yank",
+    "Yeet",
     "Zack",
     "Zane",
     "Zapp",
@@ -1499,14 +1500,9 @@ def buildName( ):
     if ( lastNameFirstHalf[ -1 ] == "y" ) and ( lastNameLastHalf[ 0 ] == "y" ):
         lastNameFirstHalf = lastNameFirstHalf[ : -1 ]
 
-    # when adding an 'e' or an 'i' to a trailing 'e', eat the trailing 'e' first
-    if ( lastNameFirstHalf[ -1 ] == "e" ) and ( lastNameLastHalf in [ "enstein", "enheimer", "erella", "erino", "inator" ] ):
+    # when adding an 'e' or an 'i' to a trailing vowel, eat the trailing vowel first
+    if ( lastNameFirstHalf[ -1 ] in vowels ) and ( lastNameLastHalf in [ "enstein", "enheimer", "erella", "erino", "inator" ] ):
         lastNameFirstHalf = lastNameFirstHalf[ : -1 ]
-
-    # double consonants with adding 'e' or 'i' makes a vowel-consonant-vowel combination
-    if ( len( lastNameFirstHalf ) > 2 ) and ( lastNameFirstHalf[ -3 ] in vowels ) and ( lastNameFirstHalf[ -2 ] in consonants ) and \
-       ( lastNameFirstHalf[ -1 ] in vowels ) and ( lastNameLastHalf in [ "enstein", "enheimer", "erella", "erino", "inator" ] ):
-        lastNameFirstHalf.Insert( -2, lastNameFirstHalf[ -2 ] )
 
     if ( lastNameFirstHalf[ -2 : ] == "le" ) and ( lastNameLastHalf in [ "ly", "ley" ] ):
         lastNameLastHalf = "y"
